@@ -1,10 +1,17 @@
 package com.naeem.main.com.naeem.topics;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Created by naeem on 5/21/17.
  */
+@Entity
 public class Topic {
+    @Id
     private String description;
+    private String id;
+    private String name;
 
     public Topic(String description, String id, String name) {
         this.description = description;
@@ -29,9 +36,6 @@ public class Topic {
     public void setName(String name) {
         this.name = name;
     }
-
-    private String id;
-    private String name;
 
     public String getDescription() {
         return description;
